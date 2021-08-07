@@ -1,14 +1,181 @@
-*{  
+*{
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
 }
 .profile{
-    background-color: blueviolet;
-    position: absolute;
-    align-items: center;
-    width: 70%;
-    height: auto;
-    margin: 150px 30% 0 10%;
+  position: absolute;
+  width: 80%;
+  height: auto;
+  margin: 150px 15% 0 5%;
+}
+
+.profile .user-data{
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.user-display{
+  width: 40%;
+  height: 100%;
+}
+.user-display .name{
+  font-size: 25px;
+  text-decoration: underline;
+  margin-left: 30%;
+  padding: 8%;
+}
+.user-display .user-image{
+  width: 50%;
+}
+.user-display .user-image img{
+  width: 200px;
+  height: auto;
+  margin-left: 80%;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid rgb(202, 202, 202);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.user-display .change-pic{
+  width: 30%;
+  font-size: 15px;
+  text-decoration: underline;
+  margin-left: 50%;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+
+.user-input{
+  width: 35%;
+  height: 100%;
+}
+.input-header{
+  margin: 3%;
+  font-size: 16px; 
+}
+
+.user-input input, .user-input select{
+  box-shadow:  0px 2px 8px;
+  padding: 10px;
+  border: 1px solid gray;
+  height: 2%;
+}
+
+.part1 input, .part6 input{
+  width: 100%;
+  margin-bottom: 1%;
+  border-radius: 0px 0px 20px;
+  outline:none;
+  -webkit-border-radius: 0px 0px 20px;
+  -moz-border-radius: 0px 0px 20px;
+  -ms-border-radius: 0px 0px 20px;
+  -o-border-radius: 0px 0px 20px;
+}
+.part1, .part2, .part3, .part4, .part5, .part6{
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+.part2 .phone-num{
+  display: flex;
+  height: 100%;
+  width: 65%;
+  margin-right: 5px;
+  flex-direction: column;
+}
+.part2 .gender{
+  display: flex;
+  height: 100%;
+  width: 35%;
+  flex-direction: column;
+}
+.part2 .gender select, .part3 .year, .part4 .phum, .part5 .srok{
+  border-radius: 0px 0px 20px;
+  outline:none;
+  -webkit-border-radius: 0px 0px 20px;
+  -moz-border-radius: 0px 0px 20px;
+  -ms-border-radius: 0px 0px 20px;
+  -o-border-radius: 0px 0px 20px;
+}
+.part2 .gender h3{
+  display: flex;
+  margin-top: 7%;
+  margin-bottom: 4%;
+}
+
+
+.part3 select{
+  width: 35%;
+  margin-right: 5px;
+}
+
+.part4 input{
+  width: 36%;
+  margin-right: 5px;
+}
+
+.part5 input{
+  width: 50%;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.part6 input{
+  width: 99%;
+  margin-top: 15px;
+}
+
+.contact{
+  display: flex;
+}
+.contact div{
+  width: 50%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+@media (max-width: 1275px) {
+  .user-display .name{
+    margin-left: 20%;
+  }
+  .user-display .user-image img{
+    margin-left: 60%;
+  }
+  .user-display .change-pic{
+    margin-left: 40%;
+  }
+}
+@media (max-width:1140px) {
+  .header{
+    z-index: 5;
+  }
+  .profile .user-data{
+    background-color: red;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .user-display{
+    background-color: rgb(51, 82, 109);
+    width: 100%;
+  }
+  .user-display .name{
+    padding: 2%;
+    margin-left: 37%;
+    margin-bottom: 15px;
+  }
+  .user-display .user-image img{
+    width: 180px;
+    margin-left: ;
+  }
 }
