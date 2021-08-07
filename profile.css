@@ -1,0 +1,14 @@
+*{  
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+.profile{
+    background-color: blueviolet;
+    position: absolute;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    margin: 150px 30% 0 10%;
+}
