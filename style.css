@@ -47,12 +47,14 @@
   -o-border-radius: 30px;
 }
 
-.header .search-box span{
+.header .search-box .search-icon{
   position: absolute;
+  cursor: pointer;
+  color: rgb(2, 84, 179);
   right: 20px;
   font-size: 20px;
   padding-left: 10px;
-  border-left: 2px solid black;
+  border-left: 2px solid rgb(2, 84, 179);;
 }
 
 .header .items{
@@ -66,13 +68,14 @@
 
 .header .items span{
   font-size: 30px;
-  color: rgb(63, 60, 60); 
+  cursor: pointer;
+  color: rgb(2, 84, 179);
 }
 
 .header .items img{
   width: 60px;
   height: 60px;
-  border: 1px solid rgb(63, 60, 60);
+  border: 1px solid rgb(2, 84, 179);
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -82,16 +85,45 @@
   -o-border-radius: 50%;
 }
 
+.container .phone-search{
+  display: none;
+  position: absolute;
+  z-index: 6;
+  background-color: #e9a914;
+  width: 40%;
+  height: 7%;
+  margin: 90px 5% 0 57%;
+}
+.phone-search input{
+  border: 2px solid rgba(64, 40, 168, 0.671);
+  border-radius: 30px;
+  padding-left: 10px;
+  outline: none;
+  height: 60%;
+  margin-top: 10px;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.phone-search .icon{
+  position: absolute;
+  color: rgb(2, 84, 179);
+  font-size: 15px;
+  border-left: 2px solid rgb(2, 84, 179);
+  padding-left: 5px;
+  right: 10%;
+  top: 30%;
+}
+
+
 .sidebar{
   display: none;
   background-color:#e9a914;
-  z-index: 1;
+  z-index: 5;
   border-radius: 10px;
   margin-top: 80px;
   margin-left: 20px;
-  padding-top: 20px;
   position: fixed;
-  opacity: 0.8;
   width: 80px;
   height: 280px;
   -webkit-border-radius: 10px;
@@ -99,9 +131,15 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-
+.sidebar .pf{
+  padding-bottom: 7%;
+  margin:10% 10% 15% 10%;
+  width: 80%;
+  border-bottom: 1px solid gray;
+}
 .sidebar img{
-  height: 60px;
+  width: 60px;
+  cursor: pointer;
 }
 .sidebar .pointer{
   position: absolute;
@@ -114,8 +152,10 @@
   -ms-transform: rotateZ(150deg);
   -o-transform: rotateZ(150deg);
 }
-
-.sidebar a{
+.sidebar .sub-item span{
+  color: rgb(2, 84, 179);
+}
+.sidebar .sub-item{
   display: block;
   align-items: center;
   font-size: 30px;
@@ -124,9 +164,11 @@
 
 .header .menu-icon{
   display: none;
+  color: rgb(2, 84, 179);
 }
 .header .search-mobi{
   display: none;
+  color: rgb(2, 84, 179);
 }
 
 .header-img img{
@@ -181,6 +223,10 @@
 .catagories .cat-item1 img{
   width: 70%;
   margin: 20px;
+  cursor: pointer;
+}
+.catagories .cat-item1 img:hover{
+  transform: scale(1.2); 
 }
 .learning{
   display: grid;
@@ -190,6 +236,13 @@
 .learning .cat-item1 img {
   width: 90%;
   margin-left: 10%;
+}
+.learning .cat-item1 img:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .learning .cat-item1{
   display: flex;
@@ -232,32 +285,47 @@
 .cloth .cat-item2{
   display: flex;
   flex-direction: column;
+  background-color: white;
   margin: 5px;
   align-items: center;
   box-shadow: 0px 3px 8px 5px #888888;
   height: 500px;
   margin-left: 10%;
 }
+.cloth .cat-item2:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
 .cloth .cat-item2 img{
   width: 80%;
   height: 60%;
 }
+
 .cloth .cat-item2 .btn{
   width: 40%;
   background-color: red;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
   height: 7%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+.cloth .cat-item2 .btn:hover{
+  background-color: #e9a914;
+}
 
 
 @media (max-width: 1140px){
   .header .search-box, .header .items{
     display: none;
+    color: rgb(2, 84, 179);
   }
   .header{
     justify-content: space-between;
@@ -336,9 +404,8 @@
   }
   .sidebar img{
     width: 40px;
-    height: auto;
   }
-  .sidebar a{
+  .sidebar .sub-item{
     font-size: 20px;
     padding: 10px 0 0 15px;
   }
@@ -387,6 +454,22 @@
   }
   .learning .cat-item1 h2{
     margin-bottom: 0;
+  }
+
+
+  .phone-search{
+    margin-top: 70px;
+    right: 0px;
+    height: 4.5%;
+  }
+  .phone-search input{
+    margin-top: 6px;
+    font-size: 10px;
+    padding-left: 3px;
+  }
+  .phone-search .icon{
+    right: 8%;
+    font-size: 11px;
   }
 }
 
@@ -499,5 +582,12 @@
   }
   .learning .cat-item1 h2{
     font-size: 12px;
+  }
+}
+
+@media (max-width: 350px) {
+  .phone-search{
+    width: 70%;
+    height: 4%;
   }
 }
