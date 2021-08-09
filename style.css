@@ -114,7 +114,24 @@
   right: 10%;
   top: 30%;
 }
-
+.dots{
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+.dots .first{
+  cursor: pointer;
+  color: #e9a914;
+}
+.dots .second{
+  color: black;
+}
+.dots div:not(:last-child){
+  margin-right: 10px;
+}
+.dots i:hover{
+  color:#e9a914;
+}
 
 .sidebar{
   display: none;
@@ -171,10 +188,16 @@
   color: rgb(2, 84, 179);
 }
 
-.header-img img{
+.header-img  img{
   width: 100%;
   height: 600px;
   margin-top: 120px;
+}
+.header-img .second-img{
+  display: none;
+}
+.header-img .first-img{
+  display: flex;
 }
 
 .produ{
@@ -226,7 +249,8 @@
   cursor: pointer;
 }
 .catagories .cat-item1 img:hover{
-  transform: scale(1.2); 
+  transform: scale(1.2);
+  z-index: -1;
 }
 .learning{
   display: grid;
@@ -291,9 +315,12 @@
   box-shadow: 0px 3px 8px 5px #888888;
   height: 500px;
   margin-left: 10%;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 .cloth .cat-item2:hover{
   cursor: pointer;
+  z-index: -1;
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -410,6 +437,7 @@
     padding: 10px 0 0 15px;
   }
   .header{
+    z-index: 5;
     padding: 0 25px 0 25px;
     height: 80px;
   }
